@@ -1,6 +1,6 @@
 {
   "name": "@kyungyun/utils",
-  "version": "0.0.16",
+  "version": "0.0.21",
   "main": "dist/index.js",
   "type": "module",
   "repository": "https://github.com/KimKyungYun/Libraty_test.git",
@@ -13,6 +13,7 @@
     "build:js": "node build.js",
     "clean": "rm -rf dist"
   },
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -24,8 +25,16 @@
     "dist",
     "src"
   ],
+   "keywords": [
+    "utils",
+    "kyungyun"
+  ],
   "dependencies": {
     "esbuild": "^0.23.1",
+    "react": "^18.3.1",
     "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.5"
   }
 }
