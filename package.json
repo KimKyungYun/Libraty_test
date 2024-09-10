@@ -1,18 +1,31 @@
 {
   "name": "@kyungyun/utils",
-  "private": false, 
-  "version": "0.0.12",
-  "main": "src/index.js",
+  "version": "0.0.16",
+  "main": "dist/index.js",
   "type": "module",
   "repository": "https://github.com/KimKyungYun/Libraty_test.git",
   "author": "KimKyungYun <kky38225221@gmail.com>",
   "license": "MIT",
-  "exports":{
-    ".":{
-      "types": "./index.d.ts",
-      "import": "./index.js",
-      "require": "./index.cjs",
-      "default": "./index.js"
+  "scripts": {
+    "prepack": "yarn build",
+    "build": "yarn clean && yarn build:tsc && yarn build:js",
+    "build:tsc": "yarn tsc --emitDeclarationOnly",
+    "build:js": "node build.js",
+    "clean": "rm -rf dist"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
     }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "dependencies": {
+    "esbuild": "^0.23.1",
+    "typescript": "^5.6.2"
   }
 }

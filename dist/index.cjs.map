@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts", "../src/cn/index.ts"],
+  "sourcesContent": ["export * from './cn';\n", "interface Classname {\n  [key: string]: boolean;\n}\n\n/** \uC5EC\uB7EC \uAC1C\uC758 className\uC744 \uD569\uCE58\uB294 \uD568\uC218 */\nexport function cn(classes: Classname) {\n  return Object.entries(classes)\n    .filter(([, value]) => value)\n    .map(([key]) => key)\n    .join(' ');\n}"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;;;ACKO,SAAS,GAAG,SAAoB;AACrC,SAAO,OAAO,QAAQ,OAAO,EAC1B,OAAO,CAAC,CAAC,EAAE,KAAK,MAAM,KAAK,EAC3B,IAAI,CAAC,CAAC,GAAG,MAAM,GAAG,EAClB,KAAK,GAAG;AACb;",
+  "names": []
+}
