@@ -1,0 +1,18 @@
+{
+  "name": "@kyungyun/utils",
+  "private": false, 
+  "version": "0.0.12",
+  "main": "src/index.js",
+  "type": "module",
+  "repository": "https://github.com/KimKyungYun/Libraty_test.git",
+  "author": "KimKyungYun <kky38225221@gmail.com>",
+  "license": "MIT",
+  "exports":{
+    ".":{
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "default": "./index.js"
+    }
+  }
+}
